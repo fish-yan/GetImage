@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1Ed-wL-KCu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--截屏-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GetImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请在相册中选择一张图片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSh-rm-EnG">
+                                <rect key="frame" x="67" y="274" width="187" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ncA-rJ-DSx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="mSh-rm-EnG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Ib-1R-1C0"/>
+                            <constraint firstAttribute="trailing" secondItem="ncA-rJ-DSx" secondAttribute="trailing" id="Rq3-lr-F1y"/>
+                            <constraint firstItem="ncA-rJ-DSx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ghc-5A-i86"/>
+                            <constraint firstItem="mSh-rm-EnG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hpu-t2-Rsb"/>
+                            <constraint firstAttribute="bottom" secondItem="ncA-rJ-DSx" secondAttribute="bottom" id="in1-on-TT7"/>
+                            <constraint firstItem="ncA-rJ-DSx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jjY-DQ-DJO"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fBh-77-SDn" appends="YES" id="kc2-ah-CPJ"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="截屏" id="QRm-p3-5x8">
+                        <barButtonItem key="leftBarButtonItem" title="全屏" id="OM4-F9-P0s">
+                            <connections>
+                                <action selector="printScreen:" destination="BYZ-38-t0r" id="tMv-1a-SXR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="相册" id="NGj-1U-eiS">
+                            <connections>
+                                <action selector="openPhotoAlbum:" destination="BYZ-38-t0r" id="8II-QH-MOp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="photoView" destination="ncA-rJ-DSx" id="zEm-sh-IG4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fBh-77-SDn">
+                    <connections>
+                        <action selector="showNavi:" destination="BYZ-38-t0r" id="rw2-sX-afz"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="694" y="406"/>
+        </scene>
+        <!--Sec View Controller-->
+        <scene sceneID="G1W-l5-3aD">
+            <objects>
+                <viewController storyboardIdentifier="SecViewController" id="81T-EF-pSz" customClass="SecViewController" customModule="GetImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6im-WX-dYI"/>
+                        <viewControllerLayoutGuide type="bottom" id="BIw-Gr-RJT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yhA-Ds-I4q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aXa-Ps-DGq">
+                                <rect key="frame" x="20" y="40" width="280" height="478"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI2-jR-AII">
+                                <rect key="frame" x="20" y="528" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.74509803919999995" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="保存到本地">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveImage:" destination="81T-EF-pSz" eventType="touchUpInside" id="EQI-ot-Gzd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dI2-jR-AII" secondAttribute="trailing" constant="20" id="4Ds-sR-Ka6"/>
+                            <constraint firstItem="aXa-Ps-DGq" firstAttribute="leading" secondItem="yhA-Ds-I4q" secondAttribute="leading" constant="20" id="EsD-wW-Sw8"/>
+                            <constraint firstItem="BIw-Gr-RJT" firstAttribute="top" secondItem="aXa-Ps-DGq" secondAttribute="bottom" constant="50" id="IHt-uo-duD"/>
+                            <constraint firstItem="dI2-jR-AII" firstAttribute="top" secondItem="aXa-Ps-DGq" secondAttribute="bottom" constant="10" id="RZT-C6-4zM"/>
+                            <constraint firstItem="dI2-jR-AII" firstAttribute="leading" secondItem="yhA-Ds-I4q" secondAttribute="leading" constant="20" id="Ufr-y7-mFQ"/>
+                            <constraint firstItem="aXa-Ps-DGq" firstAttribute="top" secondItem="6im-WX-dYI" secondAttribute="bottom" constant="20" id="ieQ-oW-lhf"/>
+                            <constraint firstAttribute="trailing" secondItem="aXa-Ps-DGq" secondAttribute="trailing" constant="20" id="q2F-DQ-JaJ"/>
+                            <constraint firstItem="BIw-Gr-RJT" firstAttribute="top" secondItem="dI2-jR-AII" secondAttribute="bottom" constant="10" id="vqA-El-k46"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1UM-8G-VlC" appends="YES" id="nNC-VJ-hcS"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="xdS-zO-BIA"/>
+                    <connections>
+                        <outlet property="image" destination="aXa-Ps-DGq" id="qmN-vu-HAl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9SI-Et-SAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1UM-8G-VlC">
+                    <connections>
+                        <action selector="showNavi:" destination="81T-EF-pSz" id="aa8-Pj-Z4t"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1042" y="407"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6zF-Ne-2wY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Ed-wL-KCu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K0B-2Z-GDI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HRE-8j-s5Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0S5-Uu-WG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="406"/>
+        </scene>
+    </scenes>
+</document>
